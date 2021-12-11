@@ -488,14 +488,14 @@
     typescript "^4.0.2"
     yargs "^17.0.0"
 
-"@naturalcycles/js-lib@^14.0.0", "@naturalcycles/js-lib@^14.6.1", "@naturalcycles/js-lib@^14.78.0":
+"@naturalcycles/js-lib@^14.0.0", "@naturalcycles/js-lib@^14.6.1":
   version "14.78.0"
   resolved "https://registry.yarnpkg.com/@naturalcycles/js-lib/-/js-lib-14.78.0.tgz#5271ccbbc10fc9efc627bb26992cfc8843a0744c"
   integrity sha512-c8TeDjy8xNUUr1DB6aqG6OyvSACXZBOgZ7C9kqNBRGaUXIXUrM7psnd0G+cET1dqB6s/hajQZO09CSLo7Re8+A==
   dependencies:
     tslib "^2.0.0"
 
-"@naturalcycles/nodejs-lib@^12.0.0", "@naturalcycles/nodejs-lib@^12.62.1", "@naturalcycles/nodejs-lib@^12.8.0":
+"@naturalcycles/nodejs-lib@^12.0.0", "@naturalcycles/nodejs-lib@^12.8.0":
   version "12.62.1"
   resolved "https://registry.yarnpkg.com/@naturalcycles/nodejs-lib/-/nodejs-lib-12.62.1.tgz#1e1cba550380622de023486a1f5fb447446c929a"
   integrity sha512-4SQJMwfrnB1UutHJycT+EC3QTyp3d4pG060aWjsiMnl1Y87sAMJLFjKqUcM0LBvmkK5ZbYkVeW0v9bZWbJf6mw==
@@ -2191,7 +2191,7 @@ globjoin@^0.1.4:
   resolved "https://registry.yarnpkg.com/globjoin/-/globjoin-0.1.4.tgz#2f4494ac8919e3767c5cbb691e9f463324285d43"
   integrity sha1-L0SUrIkZ43Z8XLtpHp9GMyQoXUM=
 
-got@^11.0.1:
+got@^11.0.0, got@^11.0.1:
   version "11.8.3"
   resolved "https://registry.yarnpkg.com/got/-/got-11.8.3.tgz#f496c8fdda5d729a90b4905d2b07dbd148170770"
   integrity sha512-7gtQ5KiPh1RtGS9/Jbv1ofDpBFuq42gyfEib+ejaRBJuj/3tQFeR5+gw57e4ipaU8c/rCjvX6fkQz2lyDlGAOg==

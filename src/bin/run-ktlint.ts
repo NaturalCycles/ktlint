@@ -19,7 +19,6 @@ console.log(['ktlint', ...args].join(' '))
 const p = spawn(ktlintPath, [...args], {
   stdio: 'inherit',
   shell: true,
-  // env : { FORCE_COLOR: 'true' }
 })
 
 // out.on('error', (error) => {

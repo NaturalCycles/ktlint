@@ -7,8 +7,7 @@
     "postpublish": "pinst --disable"
   },
   "dependencies": {
-    "@naturalcycles/js-lib": "^14.78.0",
-    "@naturalcycles/nodejs-lib": "^12.62.1"
+    "got": "^11.0.0"
   },
   "devDependencies": {
     "@naturalcycles/dev-lib": "^12.14.2",
