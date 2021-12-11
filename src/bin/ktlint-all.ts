@@ -2,7 +2,7 @@
 
 /*
 
-yarn tsn ./src/bin/run-ktlint.ts --version
+yarn tsn ./src/bin/ktlint-all.ts
 
  */
 
@@ -14,4 +14,4 @@ import { ktlintPath } from '../paths'
 const args = process.argv.slice(2)
 // console.log({argv, argv0, args})
 
-runCommand(ktlintPath, args)
+runCommand(ktlintPath, ['-F', ...args])

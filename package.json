@@ -9,6 +9,8 @@
     "@types/node": "^16.11.12",
     "got": "^11.0.0"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "resources",
@@ -18,7 +20,8 @@
     "!src/**/__exclude"
   ],
   "bin": {
-    "run-ktlint": "dist/bin/run-ktlint.js"
+    "run-ktlint": "dist/bin/run-ktlint.js",
+    "ktlint-all": "dist/bin/ktlint-all.js"
   },
   "publishConfig": {
     "access": "public"

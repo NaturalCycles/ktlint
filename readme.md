@@ -45,3 +45,15 @@ yarn run-ktlint "someFile.kt"
 ```
 
 Test it with `yarn run-ktlint --version`
+
+## ktlint-all
+
+```shell
+yarn ktlint-all
+```
+
+Equivalent of running `ktlint -F`.
+
+It also exposes a `ktlintAll` function in `index.js` for programmatic usage.
+
+It will throw an Error on non-zero return codes.
