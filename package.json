@@ -1,0 +1,49 @@
+{
+  "name": "@naturalcycles/ktlint",
+  "scripts": {
+    "prepare": "husky install",
+    "_postinstall": "node dist/install.js",
+    "prepublishOnly": "pinst --enable",
+    "postpublish": "pinst --disable"
+  },
+  "dependencies": {
+    "@naturalcycles/js-lib": "^14.78.0",
+    "@naturalcycles/nodejs-lib": "^12.62.1"
+  },
+  "devDependencies": {
+    "@naturalcycles/dev-lib": "^12.14.2",
+    "@types/node": "^16.11.12",
+    "pinst": "^2.1.6"
+  },
+  "files": [
+    "dist",
+    "resources",
+    "!src/test",
+    "!src/**/*.test.ts",
+    "!src/**/__snapshots__",
+    "!src/**/__exclude"
+  ],
+  "bin": {
+    "run-ktlint": "dist/bin/run-ktlint.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NaturalCycles/ktlint"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "version": "0.0.0",
+  "description": "ktlint, conveniently published to npm registry",
+  "keywords": [
+    "ktlint",
+    "npm",
+    "published",
+    "lint"
+  ],
+  "author": "Natural Cycles Team",
+  "license": "MIT"
+}
