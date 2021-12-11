@@ -1,6 +1,6 @@
 /*
 
-yarn tsn src/install
+yarn tsn ./scripts/install
 
  */
 
@@ -8,7 +8,7 @@ import * as fs from 'fs'
 import { pipeline } from 'stream'
 import { promisify } from 'util'
 import got from 'got'
-import { ktlintPath } from './paths'
+import { ktlintPath } from '../src/paths'
 
 const _pipeline = promisify(pipeline) as any
 
@@ -20,7 +20,11 @@ void (async () => {
     return
   }
 
-  const ktlintVersion = '0.43.2'
+  // 0.43.2 sometimes fails with error on Java 16+:
+  // https://github.com/pinterest/ktlint/issues/1195
+  // Hence, reverting to 0.40.0
+  // const ktlintVersion = '0.43.2'
+  const ktlintVersion = '0.40.0'
   console.log(`downloading ktlint ${ktlintVersion} from github, may take some time...`)
 
   const url = `https://github.com/pinterest/ktlint/releases/download/${ktlintVersion}/ktlint`
