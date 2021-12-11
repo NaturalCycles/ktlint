@@ -2,16 +2,15 @@
   "name": "@naturalcycles/ktlint",
   "scripts": {
     "prepare": "husky install",
-    "_postinstall": "node dist/install.js",
+    "_postinstall_disabled": "node dist/install.js",
     "prepublishOnly": "pinst --enable",
     "postpublish": "pinst --disable"
   },
-  "dependencies": {
-    "got": "^11.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@naturalcycles/dev-lib": "^12.14.2",
     "@types/node": "^16.11.12",
+    "got": "^11.0.0",
     "pinst": "^2.1.6"
   },
   "files": [
