@@ -20,6 +20,7 @@
     "!src/**/__exclude"
   ],
   "bin": {
+    "ktlint": "resources/ktlint",
     "run-ktlint": "dist/bin/run-ktlint.js",
     "ktlint-all": "dist/bin/ktlint-all.js"
   },
