@@ -1,6 +1,6 @@
 ## @naturalcycles/ktlint
 
-> [ktlint](https://github.com/pinterest/ktlint), conveniently published to npm registry
+> [ktlint](https://github.com/pinterest/ktlint) conveniently published to npm registry
 
 [![npm](https://img.shields.io/npm/v/@naturalcycles/ktlint/latest.svg)](https://www.npmjs.com/package/@naturalcycles/ktlint)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
@@ -10,52 +10,23 @@ Current ktlint version: ~~0.43.2~~ `0.40.0`
 
 Because `0.43.2` fails on Java 16+: https://github.com/pinterest/ktlint/issues/1195
 
-# Features
+# Quick start
 
-## ktlint binary
-
-Hosts `ktlint` binary in the npm registry.
-
-So, you can install it as:
+Install:
 
 ```shell
 yarn add -D @naturalcycles/ktlint
-
-# or with npm
-npm i --save-dev @naturalcycles/ktlint
 ```
 
-And access it as `node_modules/@naturalcycles/ktlint/resources/ktlint`.
-
-E.g:
+Run ktlint:
 
 ```shell
-node_modules/@naturalcycles/ktlint/resources/ktlint --version
+yarn ktlint --version
 ```
 
-## run-ktlint
+No Step 3!
 
-It exposes a `run-ktlint` CLI command, so you can run it like this (passing the arguments that you
-would pass to ktlint):
+## API
 
-```shell
-yarn run-ktlint -F
-
-# or
-
-yarn run-ktlint "someFile.kt"
-```
-
-Test it with `yarn run-ktlint --version`
-
-## ktlint-all
-
-```shell
-yarn ktlint-all
-```
-
-Equivalent of running `ktlint -F`.
-
-It also exposes a `ktlintAll` function in `index.js` for programmatic usage.
-
-It will throw an Error on non-zero return codes.
+You can run `ktlint` programmatically via Node.js by calling `ktlintAll()` function exposed by this
+module. It returns a Promise (rejects on non-zero code from `ktlint`, resolves on success).

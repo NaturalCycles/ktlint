@@ -448,9 +448,9 @@
     typescript "^4.0.2"
 
 "@naturalcycles/dev-lib@^12.14.2":
-  version "12.14.2"
-  resolved "https://registry.yarnpkg.com/@naturalcycles/dev-lib/-/dev-lib-12.14.2.tgz#b4d91035b6c571cbdad52463afd3f5b2c9f426b4"
-  integrity sha512-yl9NJIBkJro59hs5mD2Dwsg9Tzkg50hVdxyL8/lfOdBtpUpJ0y/9a8f4Pxs6BBKOZLWZF2QMGcXAAd7yFb6mmA==
+  version "12.15.0"
+  resolved "https://registry.yarnpkg.com/@naturalcycles/dev-lib/-/dev-lib-12.15.0.tgz#48db14211823a0dd5eb89a03ec838f49be350605"
+  integrity sha512-ga0mNIw3nTWlbq3zq4STP+JVVrsKbJ1lXHyxGWieae++9j9uW/DxGanK2QOT9cQRiSxxNkI4YxpsP50fhup+NA==
   dependencies:
     "@commitlint/cli" "^15.0.0"
     "@commitlint/config-conventional" "^15.0.0"
