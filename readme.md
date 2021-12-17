@@ -12,13 +12,19 @@ Because `0.43.2` fails on Java 16+: https://github.com/pinterest/ktlint/issues/1
 
 # Quick start
 
-Install:
+Just run it without installation:
+
+```shell
+npx @naturalcycles/ktlint --version
+```
+
+Or, install it like this:
 
 ```shell
 yarn add -D @naturalcycles/ktlint
 ```
 
-Run ktlint:
+Run ktlint (locally installed into `./node_modules`):
 
 ```shell
 yarn ktlint --version
