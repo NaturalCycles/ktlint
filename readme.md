@@ -6,7 +6,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 
-Current ktlint version: `0.44.0`
+Current ktlint version: `0.46.1`
 
 # Quick start
 
@@ -34,3 +34,14 @@ No Step 3!
 
 You can run `ktlint` programmatically via Node.js by calling `ktlintAll()` function exposed by this
 module. It returns a Promise (rejects on non-zero code from `ktlint`, resolves on success).
+
+## Development
+
+To update the ktlint version that is shipped here:
+
+- Check the ktlint [release notes](https://github.com/pinterest/ktlint/releases)
+- Change it in `scripts/install.ts` to the new version
+- Delete `resources/ktlint`
+- Run `yarn tsn install`, which will download the new version
+- Test it with `yarn ktlint --version`, it should print the new version
+- Test it with `yarn ktlint -F`

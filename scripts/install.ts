@@ -1,6 +1,6 @@
 /*
 
-yarn tsn ./scripts/install
+yarn tsn install
 
  */
 
@@ -24,7 +24,7 @@ void (async () => {
   // https://github.com/pinterest/ktlint/issues/1195
   // Hence, reverting to 0.40.0
   // const ktlintVersion = '0.43.2'
-  const ktlintVersion = '0.40.0'
+  const ktlintVersion = '0.46.1'
   console.log(`downloading ktlint ${ktlintVersion} from github, may take some time...`)
 
   const url = `https://github.com/pinterest/ktlint/releases/download/${ktlintVersion}/ktlint`

@@ -1,12 +1,13 @@
 {
   "name": "@naturalcycles/ktlint",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "ktlint": "resources/ktlint"
   },
   "dependencies": {},
   "devDependencies": {
-    "@naturalcycles/dev-lib": "^12.14.2",
-    "@types/node": "^17.0.18",
+    "@naturalcycles/dev-lib": "^13.0.1",
+    "@types/node": "^18.0.0",
     "got": "^11.0.0"
   },
   "main": "dist/index.js",
