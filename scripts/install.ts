@@ -12,6 +12,7 @@ import { ktlintPath } from '../src/paths'
 
 const _pipeline = promisify(pipeline) as any
 
+// eslint-disable-next-line unicorn/prefer-top-level-await
 void (async () => {
   if (fs.existsSync(ktlintPath)) {
     // const {size, mode} = fs.statSync(ktlintPath)
@@ -24,7 +25,7 @@ void (async () => {
   // https://github.com/pinterest/ktlint/issues/1195
   // Hence, reverting to 0.40.0
   // const ktlintVersion = '0.43.2'
-  const ktlintVersion = '0.46.1'
+  const ktlintVersion = '0.47.1'
   console.log(`downloading ktlint ${ktlintVersion} from github, may take some time...`)
 
   const url = `https://github.com/pinterest/ktlint/releases/download/${ktlintVersion}/ktlint`
