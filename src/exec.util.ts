@@ -1,4 +1,4 @@
-import { spawn, SpawnOptions } from 'child_process'
+import { spawn, SpawnOptions } from 'node:child_process'
 
 export function runCommand(command: string, args: string[] = [], opt: SpawnOptions = {}): void {
   console.log([command, ...args].join(' '))
