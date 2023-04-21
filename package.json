@@ -7,8 +7,8 @@
   "dependencies": {},
   "devDependencies": {
     "@naturalcycles/dev-lib": "^13.0.1",
-    "@types/node": "^18.0.0",
-    "got": "^11.0.0"
+    "@naturalcycles/js-lib": "^14.149.1",
+    "@types/node": "^18.0.0"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -31,7 +31,7 @@
     "url": "https://github.com/NaturalCycles/ktlint"
   },
   "engines": {
-    "node": ">=14.15.0"
+    "node": ">=16.15.0"
   },
   "version": "0.0.0",
   "description": "ktlint, conveniently published to npm registry",
