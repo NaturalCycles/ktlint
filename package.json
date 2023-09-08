@@ -8,7 +8,7 @@
   "devDependencies": {
     "@naturalcycles/dev-lib": "^13.0.1",
     "@naturalcycles/js-lib": "^14.149.1",
-    "@types/node": "^18.0.0"
+    "@types/node": "^20.5.9"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

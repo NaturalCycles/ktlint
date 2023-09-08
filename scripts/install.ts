@@ -4,9 +4,9 @@ yarn tsn install
 
  */
 
-import * as fs from 'node:fs'
-import { pipeline } from 'node:stream/promises'
+import fs from 'node:fs'
 import { Readable } from 'node:stream'
+import { pipeline } from 'node:stream/promises'
 import { _hb, getFetcher } from '@naturalcycles/js-lib'
 import { ktlintPath } from '../src/paths'
 
@@ -22,7 +22,7 @@ void (async () => {
   // https://github.com/pinterest/ktlint/issues/1195
   // Hence, reverting to 0.40.0
   // const ktlintVersion = '0.43.2'
-  const ktlintVersion = '0.49.0'
+  const ktlintVersion = '1.0.0'
   console.log(`downloading ktlint ${ktlintVersion} from github, may take some time...`)
 
   const url = `https://github.com/pinterest/ktlint/releases/download/${ktlintVersion}/ktlint`
@@ -51,6 +51,6 @@ void (async () => {
   chmod()
 })()
 
-function chmod() {
+function chmod(): void {
   fs.chmodSync(ktlintPath, '775')
 }
