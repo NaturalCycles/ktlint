@@ -6,7 +6,7 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 
-Current ktlint version: `1.3.1`
+Current ktlint version: `1.5.0`
 
 # Quick start
 
