@@ -11,10 +11,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@naturalcycles/dev-lib": "^15.4.2",
-    "@naturalcycles/js-lib": "^14.149.1",
-    "@types/node": "^22.1.0"
+    "@naturalcycles/dev-lib": "^17",
+    "@naturalcycles/js-lib": "^14",
+    "@types/node": "^22",
+    "tsx": "^4"
   },
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

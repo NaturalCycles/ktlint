@@ -1,6 +1,6 @@
 /*
 
-yarn tsn install
+yarn tsx install
 
  */
 
@@ -8,7 +8,7 @@ import fs from 'node:fs'
 import { Readable } from 'node:stream'
 import { pipeline } from 'node:stream/promises'
 import { _hb, getFetcher } from '@naturalcycles/js-lib'
-import { ktlintPath } from '../src/paths'
+import { ktlintPath } from '../src/paths.js'
 
 // eslint-disable-next-line unicorn/prefer-top-level-await
 void (async () => {
