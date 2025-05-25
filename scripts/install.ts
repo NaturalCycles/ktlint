@@ -1,6 +1,6 @@
 /*
 
-yarn tsx install
+pn tsx scripts/install.ts
 
  */
 
@@ -22,7 +22,7 @@ void (async () => {
   // https://github.com/pinterest/ktlint/issues/1195
   // Hence, reverting to 0.40.0
   // const ktlintVersion = '0.43.2'
-  const ktlintVersion = '1.5.0'
+  const ktlintVersion = '1.6.0'
   console.log(`downloading ktlint ${ktlintVersion} from github, may take some time...`)
 
   const url = `https://github.com/pinterest/ktlint/releases/download/${ktlintVersion}/ktlint`
