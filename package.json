@@ -1,22 +1,24 @@
 {
   "name": "@naturalcycles/ktlint",
+  "type": "module",
   "scripts": {
     "prepare": "husky",
+    "upd": "pnpm up --no-save",
     "ktlint": "resources/ktlint",
     "build": "dev-lib build",
     "test": "dev-lib test",
     "lint": "dev-lib lint",
     "bt": "dev-lib bt",
-    "lbt": "dev-lib lbt"
+    "lbt": "dev-lib lbt",
+    "check": "dev-lib lbt"
   },
   "dependencies": {},
   "devDependencies": {
-    "@naturalcycles/dev-lib": "^17",
-    "@naturalcycles/js-lib": "^14",
+    "@naturalcycles/dev-lib": "^19",
+    "@naturalcycles/js-lib": "^15",
     "@types/node": "^22",
     "tsx": "^4"
   },
-  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -40,6 +42,7 @@
   "engines": {
     "node": ">=20.13.0"
   },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
   "version": "0.0.0",
   "description": "ktlint, conveniently published to npm registry",
   "keywords": [

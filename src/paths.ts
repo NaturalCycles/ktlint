@@ -1,9 +1,5 @@
-import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { join } from 'node:path'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-export const projectDir = join(__dirname, '..')
+export const projectDir = join(import.meta.dirname, '..')
 export const resourcesDir = `${projectDir}/resources`
 export const ktlintPath = `${resourcesDir}/ktlint`

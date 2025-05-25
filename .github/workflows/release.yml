@@ -4,29 +4,21 @@ on:
   push:
     branches: [master, next, act]
 
+env:
+  NODE_OPTIONS: --max-old-space-size=5000
+
 jobs:
   release-job:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'skip ci')"
-    env: { NODE_OPTIONS: '--max-old-space-size=3200' }
     steps:
       - { uses: actions/checkout@v4, with: { persist-credentials: true } }
-      - { uses: actions/setup-node@v4, with: { node-version: 'lts/*', cache: 'yarn' } }
-
-      # Cache for npm/npx in ~/.npm
-      - uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: npm-v1-${{ runner.os }}
-
-      - name: yarn
-        run: yarn --frozen-lockfile
-
-      - name: build
-        run: yarn build
-
+      - uses: pnpm/action-setup@v4
+      - { uses: actions/setup-node@v4, with: { node-version: 'lts/*', cache: 'pnpm' } }
+      - run: pnpm install
+      - run: pnpm build
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx @naturalcycles/semantic-release
+        run: pnpm dlx @naturalcycles/semantic-release

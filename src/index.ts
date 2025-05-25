@@ -1,4 +1,4 @@
-import { SpawnOptions } from 'node:child_process'
+import type { SpawnOptions } from 'node:child_process'
 import { runCommandSafe } from './exec.util.js'
 import { ktlintPath } from './paths.js'
 

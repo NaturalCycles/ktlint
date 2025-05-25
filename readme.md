@@ -42,6 +42,6 @@ To update the ktlint version that is shipped here:
 - Check the ktlint [release notes](https://github.com/pinterest/ktlint/releases)
 - Change it in `scripts/install.ts` to the new version (and in this readme.md too)
 - Delete `resources/ktlint`
-- Run `yarn tsn install`, which will download the new version
-- Test it with `yarn ktlint --version`, it should print the new version
-- Test it with `yarn ktlint -F`
+- Run `pnpm tsx scripts/install.ts`, which will download the new version
+- Test it with `pnpm ktlint --version`, it should print the new version
+- Test it with `pnpm ktlint -F`
