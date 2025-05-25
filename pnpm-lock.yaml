@@ -17,6 +17,9 @@ importers:
       '@types/node':
         specifier: ^22
         version: 22.15.21
+      husky:
+        specifier: ^9
+        version: 9.1.7
       tsx:
         specifier: ^4
         version: 4.19.4

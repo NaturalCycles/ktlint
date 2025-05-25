@@ -17,6 +17,7 @@
     "@naturalcycles/dev-lib": "^19",
     "@naturalcycles/js-lib": "^15",
     "@types/node": "^22",
+    "husky": "^9",
     "tsx": "^4"
   },
   "main": "dist/index.js",
