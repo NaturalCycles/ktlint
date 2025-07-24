@@ -7,7 +7,8 @@ pn tsx scripts/install.ts
 import fs from 'node:fs'
 import { Readable } from 'node:stream'
 import { pipeline } from 'node:stream/promises'
-import { _hb, getFetcher } from '@naturalcycles/js-lib'
+import { _hb } from '@naturalcycles/js-lib'
+import { getFetcher } from '@naturalcycles/js-lib/http'
 import { ktlintPath } from '../src/paths.js'
 
 // eslint-disable-next-line unicorn/prefer-top-level-await

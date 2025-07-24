@@ -9,14 +9,13 @@
     "test": "dev-lib test",
     "lint": "dev-lib lint",
     "bt": "dev-lib bt",
-    "lbt": "dev-lib lbt",
-    "check": "dev-lib lbt"
+    "check": "dev-lib check"
   },
   "dependencies": {},
   "devDependencies": {
     "@naturalcycles/dev-lib": "^19",
     "@naturalcycles/js-lib": "^15",
-    "@types/node": "^22",
+    "@types/node": "^24",
     "husky": "^9",
     "tsx": "^4"
   },
