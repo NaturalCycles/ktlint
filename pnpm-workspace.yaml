@@ -2,3 +2,7 @@ onlyBuiltDependencies:
   - '@biomejs/biome'
   - esbuild
   - unrs-resolver
+publicHoistPattern:
+  - eslint
+  - prettier
+  - '@biomejs/biome'
