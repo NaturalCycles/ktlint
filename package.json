@@ -13,7 +13,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@naturalcycles/dev-lib": "^19",
+    "@naturalcycles/dev-lib": "^20",
     "@naturalcycles/js-lib": "^15",
     "@types/node": "^24",
     "husky": "^9",
@@ -42,7 +42,7 @@
   "engines": {
     "node": ">=20.13.0"
   },
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.23.0",
   "version": "0.0.0",
   "description": "ktlint, conveniently published to npm registry",
   "keywords": [

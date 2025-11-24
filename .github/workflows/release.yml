@@ -11,14 +11,19 @@ jobs:
   release-job:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'skip ci')"
+    permissions:
+      id-token: write # Required for OIDC
+      contents: write
+      issues: write
+      pull-requests: write
     steps:
-      - { uses: actions/checkout@v5, with: { persist-credentials: true } }
+      - { uses: actions/checkout@v6, with: { persist-credentials: true } }
       - uses: pnpm/action-setup@v4
-      - { uses: actions/setup-node@v4, with: { node-version: 'lts/*', cache: 'pnpm' } }
+      - { uses: actions/setup-node@v6, with: { node-version: 'lts/*', cache: 'pnpm' } }
       - run: pnpm install
       - run: pnpm build
       - name: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm dlx @naturalcycles/semantic-release
+        run: pnpx @naturalcycles/semantic-release

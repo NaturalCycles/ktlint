@@ -11,19 +11,16 @@ import { _hb } from '@naturalcycles/js-lib'
 import { getFetcher } from '@naturalcycles/js-lib/http'
 import { ktlintPath } from '../src/paths.js'
 
-// eslint-disable-next-line unicorn/prefer-top-level-await
-void (async () => {
+await install()
+
+async function install(): Promise<void> {
   if (fs.existsSync(ktlintPath)) {
     const { size } = fs.statSync(ktlintPath)
     return console.log(`ktlint exists, size: ${_hb(size)}`)
     // todo: check if installed version is the same!
   }
 
-  // 0.43.2 sometimes fails with error on Java 16+:
-  // https://github.com/pinterest/ktlint/issues/1195
-  // Hence, reverting to 0.40.0
-  // const ktlintVersion = '0.43.2'
-  const ktlintVersion = '1.7.1'
+  const ktlintVersion = '1.8.0'
   console.log(`downloading ktlint ${ktlintVersion} from github, may take some time...`)
 
   const url = `https://github.com/pinterest/ktlint/releases/download/${ktlintVersion}/ktlint`
@@ -50,7 +47,7 @@ void (async () => {
   console.log(`ktlint size: ${_hb(size)}`)
 
   chmod()
-})()
+}
 
 function chmod(): void {
   fs.chmodSync(ktlintPath, '775')
