@@ -1,9 +1,10 @@
-import { spawn, type SpawnOptions } from 'node:child_process'
+import { spawn } from 'node:child_process'
+import type { SpawnOptions } from 'node:child_process'
 
 export function runCommand(command: string, args: string[] = [], opt: SpawnOptions = {}): void {
   console.log([command, ...args].join(' '))
 
-  const p = spawn(command, [...args], {
+  const p = spawn([command, ...args].join(' '), {
     stdio: 'inherit',
     shell: true,
     ...opt,
@@ -29,7 +30,7 @@ export async function runCommandSafe(
   console.log([command, ...args].join(' '))
 
   return await new Promise((resolve, reject) => {
-    const p = spawn(command, [...args], {
+    const p = spawn([command, ...args].join(' '), {
       stdio: 'inherit',
       shell: true,
       ...opt,
