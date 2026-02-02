@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": ["__exclude"],
+  "arrowParens": "avoid",
+  "proseWrap": "always",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "experimentalSortPackageJson": false,
+  "experimentalSortImports": {
+    "newlinesBetween": false,
+    "groups": [
+      "side-effect",
+      "side-effect-style",
+      "builtin",
+      "external",
+      ["internal", "parent", "sibling", "index"],
+      "unknown",
+    ],
+  },
+}

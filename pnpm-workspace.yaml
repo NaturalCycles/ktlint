@@ -3,8 +3,7 @@ onlyBuiltDependencies:
   - esbuild
   - unrs-resolver
 publicHoistPattern:
-  - eslint
   - oxlint
   - 'oxlint-tsgolint'
-  - prettier
+  - oxfmt
   - '@biomejs/biome'

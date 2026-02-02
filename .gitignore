@@ -32,6 +32,7 @@ node_modules
 /.sass-cache
 /.sourcemaps
 /docs/.vuepress/dist
+/.claude/settings.local.json
 
 /coverage
 /report
