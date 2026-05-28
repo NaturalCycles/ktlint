@@ -1,9 +1,6 @@
-onlyBuiltDependencies:
-  - '@biomejs/biome'
-  - esbuild
-  - unrs-resolver
+allowBuilds:
+  esbuild: true
 publicHoistPattern:
   - oxlint
   - 'oxlint-tsgolint'
   - oxfmt
-  - '@biomejs/biome'
