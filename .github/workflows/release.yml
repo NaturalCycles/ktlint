@@ -17,13 +17,10 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - { uses: actions/checkout@v6, with: { persist-credentials: true } }
-      - uses: pnpm/action-setup@v5
-      - { uses: actions/setup-node@v6, with: { node-version: 'lts/*', cache: 'pnpm' } }
-      - run: pnpm install
+      - { uses: actions/checkout@v7, with: { persist-credentials: false } }
+      - { uses: actions/setup-node@v7, with: { node-version: '24' } }
+      - { uses: pnpm/setup@v2, with: { cache: true } }
       - run: pnpm build
-      - name: release
+      - run: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpx @naturalcycles/semantic-release
